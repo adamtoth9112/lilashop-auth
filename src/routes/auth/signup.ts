@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import User from '../models/User';
+import User from '../../models/User';
 
 const router = express.Router();
 
@@ -8,7 +8,7 @@ const router = express.Router();
  * @desc    Register a new user
  * @access  Public
  */
-router.post('/signup', async (req: Request, res: Response): Promise<void> => {
+router.post('/', async (req: Request, res: Response): Promise<void> => {
     try {
         const { email, password } = req.body;
 
